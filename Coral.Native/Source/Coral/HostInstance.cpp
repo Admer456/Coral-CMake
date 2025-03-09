@@ -166,8 +166,9 @@ namespace Coral {
 					continue;
 
 				auto dirPath = dir.path().string();
+				auto dotnetOffset = dirPath.find("dotnet");
 
-				if (dirPath.find(CORAL_DOTNET_TARGET_VERSION_MAJOR_STR) == std::string::npos)
+				if (dirPath.find(CORAL_DOTNET_TARGET_VERSION_MAJOR_STR, dotnetOffset) == std::string::npos)
 					continue;
 
 				auto res = dir / std::filesystem::path(CORAL_HOSTFXR_NAME);

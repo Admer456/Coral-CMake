@@ -20,3 +20,5 @@ Makefile
 *.code-workspace
 
 build/
+
+!Coral.Managed/*.csproj
